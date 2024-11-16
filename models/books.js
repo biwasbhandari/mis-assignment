@@ -1,28 +1,27 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 const { Schema } = mongoose;
 
 const bookSchema = new Schema({
-    title: {
-        type: String,
-        trim: true,
-        unique: true,
-    },
+  title: {
+    type: String,
+    trim: true,
+    unique: true,
+  },
 
-    description: {
-        type: String,
-        trim: true,
-    },
+  description: {
+    type: String,
+    trim: true,
+  },
 
+  price: {
+    type: String,
+  },
 
-    price: {
-        type: String,
-    },
-
-    image: {
-        type: String,
-    },
+  image: {
+    type: String,
+  },
 });
 
-const Book = mongoose.model('Book', bookSchema);
+const Book = mongoose.model("Book", bookSchema);
 
-export default Book
+export default Book;
